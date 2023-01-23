@@ -1,2 +1,2 @@
 # php-web-scraping
-php ile websiteden veri çekme
+php ile veri çekme proxy kullanarak
