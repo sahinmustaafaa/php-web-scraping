@@ -1,5 +1,10 @@
 <?php
 error_reporting(0);
+//$db= new mysqli("localhost", "root", "", "veriler");
+//if($db->connect_error){
+	//die("veritabanına bağlanılamadı".$db->connect_errno);
+//}
+//veritabanı bağlantı kodları
 for ($i = 1; $i <= 32; $i++) {
 	$checkProxy = "http://api.scrape.do?token=10677daf41b843d9816701c82de63068e948af865c4&url=https://httpbin.org/ip?json";
     //httpbin.org ip nin değişip değişmediğini kontrol eder.
@@ -16,6 +21,8 @@ for ($i = 1; $i <= 32; $i++) {
 	$icerik = $icerik_al[0][0];
    
     //print_r($icerik);
+//$db->query("insert into hisseveri hisseAdi='$hisse[1]', sonFiyat='$son[1]', dünküFiyat='$dün[1]', yüzdeDegisim='$yüzde[1]', günlükMax='$yüksek[1]', günlükMin='$düşük[1]', hacimLot='$lot[1]', hacimTL='$tl[1]'");
+// veritabanına  verileri ekleme kodları
     
     $hisseler = explode("<tr>",$icerik);
     print_r($hisseler);
